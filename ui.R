@@ -5,7 +5,8 @@ numericInput('id1', 'No of Cylinder', 4, min = 4, max = 8, step = 2),
 numericInput('id2', 'Weight (lb/1000)', 1.513, min = 1.513, max = 5.424, step = 0.01),
 numericInput('id3', 'Qsec	 (1/4 mile time)', 14.50 , min = 14.50 , max = 22.90, step = 0.1),
 numericInput('id4', 'Transmission (0 = automatic, 1 = manual)', 0, min = 0, max = 1, step = 1),
-submitButton('Submit')
+submitButton('Submit'),
+helpText('This app is a simple calculator for your vehicle miles per gallon (MPG). Simply key in the 4 information required in those columns and click submit, then the results will show up on the right hand side under prediction ')
 ),
 mainPanel(
 h2('Details entered'),
@@ -17,7 +18,7 @@ h4('You entered'),
 verbatimTextOutput("oid3"),
 h4('You entered'),
 verbatimTextOutput("oid4"),
-h2('Results of prediction (Yours Miles per Gallon (MPG))'),
+h2('Prediction (Yours vehicle Miles per Gallon (MPG))'),
 verbatimTextOutput("prediction")
 )
 ))
